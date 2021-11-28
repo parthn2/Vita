@@ -1,5 +1,4 @@
 import { Server, Socket } from 'socket.io';
-import chalk from 'chalk';
 import { nanoid } from 'nanoid';
 import roomsCache from '../config/NodeCache';
 import { CLIENT_URL } from '../config/keys';
@@ -27,7 +26,7 @@ const socketService = (httpServer: http.Server): void => {
   }
 
   io.on('connection', (socket: Socket) => {
-    console.log(`A user ${chalk.green(socket.id.slice(0, 5))} conmnection`);
+    console.log(`A user ${socket.id.slice(0, 5)} conmnection`);
 
     socket.on('register', ({ sessionId, roomId }: Register) => {
       roomsCache.set<Person>(socket.id, { sessionId });

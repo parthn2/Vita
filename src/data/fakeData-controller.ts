@@ -4,7 +4,6 @@ import { getMentor, getUser } from './index';
 import { MentorModel, UserModel } from '../Models/User';
 import { TopicModel } from '../Models/Topics';
 
-import chalk from 'chalk';
 import { topics } from '../utils/topicsData';
 
 export const fakeDataController = async (req: Request, res: Response) => {
@@ -22,9 +21,9 @@ export const fakeDataController = async (req: Request, res: Response) => {
     user.mentor_information = mentor._id;
 
     await user.save();
-    console.log(chalk.magenta('user is Saved in the database'));
+    console.log('user is Saved in the database');
     await mentor.save();
-    console.log(chalk.magenta('Mentor is Saved in the database'));
+    console.log('Mentor is Saved in the database');
   }
 };
 
@@ -32,6 +31,6 @@ export const topicDataController = async (req: Request, res: Response) => {
   for (let i = 0; i < topics.length; i++) {
     const topic = new TopicModel(topics[i]);
     await topic.save();
-    console.log(chalk.magenta(`${i} Topic is Saved in the database`));
+    console.log(`${i} Topic is Saved in the database`);
   }
 };
