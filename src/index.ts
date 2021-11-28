@@ -15,7 +15,7 @@ import passport from 'passport';
 const app = express();
 const httpServer = new http.Server(app);
 
-connectDB();
+// connectDB();
 useMiddleWare(app);
 
 app.use(passport.initialize());

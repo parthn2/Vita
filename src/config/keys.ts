@@ -3,13 +3,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-export const DB = {
-  HOST: process.env.DB_HOST,
-  USER: process.env.DB_USER,
-  PASSWORD: process.env.DB_PASSWORD,
-  PORT: parseInt(<string>process.env.DB_PORT),
-  DATABASE: process.env.DB_DATABASE,
-};
 
 export const DATABASE_URL = process.env.DATABASE_URL!;
 
