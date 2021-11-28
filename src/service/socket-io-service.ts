@@ -8,7 +8,7 @@ import getRoomFromLink from '../utils/getRoomFromLink';
 const socketService = (httpServer: http.Server): void => {
   const IO_OPTIONS = {
     cors: {
-      origin: '*',
+      origin: CLIENT_URL,
       methods: ['GET', 'POST', 'DELETE', 'PATCH', 'UPDATE'],
       credentials: true,
     },
