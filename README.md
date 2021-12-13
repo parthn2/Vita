@@ -50,6 +50,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Setting up Database</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -137,6 +138,10 @@ Install [NodeJS LTS](https://nodejs.org/en/)
    ```sh
    npm run dev
    ```
+
+### Setting up DATABASE
+
+To setup the database with mockdata, follow this [guide](/Setting%20up%20Database.md)
 
 ## Roadmap
 
